@@ -4,7 +4,7 @@
 Working to add diffrent formats to convert directly to 3DS Game formats.
 
 Originaly [3dstex](https://github.com/Cruel/3dstex)
-
+```
 Usage:
   ./3dstex-ex [options] input output
   ./3dstex-ex -b [options] files ...
