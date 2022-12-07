@@ -43,9 +43,12 @@ enum PixelFormat
 
 typedef struct
 {
-	u16 format;         //< Format matching ctrulib enum GPU_TEXCOLOR
-	u16 width;          //< Width (original width to next power of 2)
-	u16 height;         //< Height (original height to next power of 2)
-	u16 widthOriginal;  //< Width of original input
-	u16 heightOriginal; //< Height of original input
+	u32 magic;
+	u32 verstion;
+	u32 format;         //< Format matching ctrulib enum GPU_TEXCOLOR
+	u32 width;          //< Width (original width to next power of 2)
+	u32 height;         //< Height (original height to next power of 2)
+	u32 widthOriginal;  //< Width of original input
+	u32 heightOriginal; //< Height of original input
+	u32 mipcount;
 } Header;

@@ -36,10 +36,13 @@ void Encoder::saveToFile(const std::string &filePath, bool useHeader)
 
 void Encoder::processDecodedData(const std::vector<u8> &data, int width, int height, bool hasAlpha)
 {
+	m_header.magic = 1414743091;
+	m_header.verstion = 3;
 	m_header.widthOriginal = width;
 	m_header.heightOriginal = height;
 	m_header.width = nextPow2(width);
 	m_header.height = nextPow2(height);
+	m_header.mipcount = 1;
 	m_hasAlpha = hasAlpha;
 	
 	// Check for special formats and set appropriate one

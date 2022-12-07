@@ -11,6 +11,7 @@
 Decoder::Decoder(const std::string &filePath, PixelFormat format)
 	: m_format(format)
 {
+	printf("Bruh\n");
 	if (format == DefaultFormat && loadImageFile(filePath))
 		return;
 	if (!loadTextureFile(filePath))

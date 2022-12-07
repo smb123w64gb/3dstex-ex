@@ -188,10 +188,12 @@ int main(int argc, char **argv)
 		std::string outputFilePath = argv[optind + 1];
 		try
 		{
-			std::cout << "Processing " << inputFilePath << " ..." << std::endl;
-			
+			std::cout << "Decoding " << inputFilePath << " ..." << std::endl;
+		
 			Decoder decoder(inputFilePath, formatInput);
+			std::cout << "Process " << inputFilePath << " ..." << std::endl;
 			encoder.processDecodedData(decoder);
+			std::cout << "Saving " << inputFilePath << " ..." << std::endl;
 			encoder.saveToFile(outputFilePath, useHeader);
 			
 			printf("[" CYAN "%s" RESET " -> " CYAN "%s" RESET "] " GREEN "%s\n" RESET,
@@ -235,6 +237,7 @@ int main(int argc, char **argv)
 		
 		try
 		{
+			printf("Am i working\n");
 			std::cout << "Processing " << filePath << " ..." << std::endl;
 			std::string outputFilePath = (outputDir.empty() ? dirName : outputDir) + outputFileName;
 			
